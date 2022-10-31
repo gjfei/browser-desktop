@@ -1,0 +1,22 @@
+{
+  "name": "browser-desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "pnpm run -C packages/web dev && pnpm run -C packages/server start:dev",
+    "dev:web": "pnpm run -C packages/web dev",
+    "dev:serve": "pnpm run -C packages/server start:dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@browser-desktop/server": "workspace:*",
+    "@browser-desktop/web": "workspace:*"
+  }
+}
